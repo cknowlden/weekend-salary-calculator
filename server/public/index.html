@@ -10,7 +10,7 @@
     <h1>Salary Calculator</h1>
   </header>
   <main>
-    <h2>Add Employee</h2>
+    <h2 class="employee">Add Employee</h2>
     <form onsubmit="handleSubmit(event)">
       <input 
         name="firstNameInput" 
@@ -49,7 +49,31 @@
     <h2>Employees</h2>
     <section>
       <h4>Forms</h4>
-        
+      <table id="employeeTable">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Annual</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="employeeTable tbody'">
+          <tr>
+            <!--the cells in the body tag are td-->
+            <td>Jane</td>
+            <td>Doe</td>
+          </tr>
+          <tr>
+            <!--the cells in the body tag are td-->
+            <td>John</td>
+            <td>Smith</td>
+          </tr>
+        </tbody>
+        <!-- tbody is the body of the table-->
+      </table>  
     </section>
   </main>
   <footer>
@@ -59,12 +83,7 @@
 </html>
 
 
-* Your form's inputs must have these exact attributes:
-    * `data-testid="firstNameInput"`
-    * `data-testid="lastNameInput"`
-    * `data-testid="idInput"`
-    * `data-testid="titleInput"`
-    * `data-testid="annualSalaryInput"`
+
 * You must use a `<table>` element, where each employee is represented by a single `<tr>`.
 * The *total monthly* cost must be rendered somewhere inside the `<footer>` element.
 * The `over-budget` CSS class must be applied to the `<footer>` element when the total monthly salary exceeds $20,000.
