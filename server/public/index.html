@@ -12,43 +12,44 @@
   </header>
   <main>
     <h2 class="employee">Add Employee</h2>
-    <form onsubmit="handleClick(event)">
+    <form onsubmit="handleSubmit(eventObj)">
       <input 
         name="firstNameInput" 
-        data-testid="firstNameInput" 
+        data-testid="firstNameInput"
+        id="firstNameInput" 
         placeholder="First Name"
         type=text 
         />
       <input 
         name="lastNameInput"
         data-testid="lastNameInput"
+        id="lastNameInput"
         placeholder="Last Name"
         type="text"
         />
         <input 
         name="idInput"
         data-testid="idInput"
+        id="idInput"
         placeholder="ID"
         type="number"
         />
         <input 
         name="titleInput"
         data-testid="titleInput"
+        id="titleInput"
         placeholder="Title"
         type="text"
         />
         <input 
         name="annualSalaryInput"
         data-testid="annualSalaryInput"
+        id="annualSalaryInput"
         placeholder="Annual Salary"
         type="number"
         />
-        <!-- <button data-testid="submitButton" onclick="handleClick(event)">
-          <span>Submit</span>
-        </button> -->
-        <button data-testid="submitButton">
-          <span>Submit</span>
-        </button>
+        <!-- <button data-testid="submitButton" onclick="handleSubmit(eventObj)">Submit</button> -->
+        <button data-testid="submitButton">Submit</button>
       </form>
     <h2>Employees</h2>
     <section>
