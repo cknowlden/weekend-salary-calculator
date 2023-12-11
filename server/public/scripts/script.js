@@ -1,6 +1,6 @@
 console.log('employee salary calc');
 
-function handleSubmit(eventObj){
+function handleClick(eventObj){
 	//prevents default action, like a refresh on submit
 	eventObj.preventDefault();
 	
@@ -39,4 +39,4 @@ function handleSubmit(eventObj){
         // annualSalaryInputElement.value = '';
 }
 
-module.exports = sayNames;
+//module.exports = sayNames;

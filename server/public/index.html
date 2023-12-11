@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="./styles/style.css">
   <title>Salary Calculator</title>
+  <script defer src="./scripts/script.js"></script>
 </head>
 <body>
   <header>
@@ -11,7 +12,7 @@
   </header>
   <main>
     <h2 class="employee">Add Employee</h2>
-    <form onsubmit="handleSubmit(event)">
+    <form onsubmit="handleClick(event)">
       <input 
         name="firstNameInput" 
         data-testid="firstNameInput" 
@@ -42,10 +43,13 @@
         placeholder="Annual Salary"
         type="number"
         />
-        <button data-testid="submitButton" onclick="handleClick(event)">
+        <!-- <button data-testid="submitButton" onclick="handleClick(event)">
+          <span>Submit</span>
+        </button> -->
+        <button data-testid="submitButton">
           <span>Submit</span>
         </button>
-        </form>
+      </form>
     <h2>Employees</h2>
     <section>
       <h4>Forms</h4>
@@ -81,9 +85,3 @@
   </footer>
 </body>
 </html>
-
-
-
-* You must use a `<table>` element, where each employee is represented by a single `<tr>`.
-* The *total monthly* cost must be rendered somewhere inside the `<footer>` element.
-* The `over-budget` CSS class must be applied to the `<footer>` element when the total monthly salary exceeds $20,000.
