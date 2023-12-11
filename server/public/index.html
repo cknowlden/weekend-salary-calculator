@@ -12,6 +12,7 @@
   </header>
   <main>
     <h2 class="employee">Add Employee</h2>
+    <div id="error"></div>
     <form onsubmit="handleSubmit(event)">
       <input 
         name="firstNameInput" 
@@ -65,14 +66,13 @@
           </tr>
         </thead>
         <tbody id="employeeTable tbody'">
-
         </tbody>
-        <!-- tbody is the body of the table-->
+        
       </table>  
     </section>
   </main>
   <footer>
-    <p>Total Monthly</p>
+    <p id="total-monthly">Total Monthly</p>
   </footer>
 </body>
 </html>

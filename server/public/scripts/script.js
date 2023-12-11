@@ -8,6 +8,7 @@ function handleSubmit(event){
     const idInputElement = document.getElementById('idInput');
     const titleInputElement = document.getElementById('titleInput');
     const annualSalaryInputElement = document.getElementById('annualSalaryInput');
+    const errorElement = document.getElementById('error');
 	console.log('Submit', event);
 	
 	console.log('First name:', firstNameInputElement.value);
@@ -15,6 +16,12 @@ function handleSubmit(event){
     console.log('ID:', idInputElement.value);
     console.log('Title:', titleInputElement.value);
     console.log('Annual salary:', annualSalaryInputElement.value);
+
+    //alert when there's an error in filling the form
+    if (!firstNameInputElement || !lastNameInputElement || !idInputElement || !titleInputElement || !annualSalaryInputElement) {
+        alert('Value is required');
+        return;
+      }
 
 	const tableElement = document.querySelector('#employeeTable tbody');
 	console.log('TABLE:', tableElement)
@@ -34,5 +41,16 @@ function handleSubmit(event){
         titleInputElement.value = '';
         annualSalaryInputElement.value = '';
 }
+
+    //total annual salaries
+function totalMonthly(){
+    var table = document.getElementById('employeeTable');
+    let total = 0;
+    for(let i=1; i<table.rows.length; i++){
+        total+=parseInt(table.rows[i].cells[2].innerHTML)
+    }
+    console.log(total);
+}
+totalMonthly();
 
 //module.exports = sayNames;
