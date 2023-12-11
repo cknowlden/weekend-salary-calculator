@@ -32,8 +32,11 @@ function handleSubmit(eventObj){
 		</tr>
 		`
 		//clear form fields
-		firstNameElement.value = '';
-		lastNameElement.value = '';
+		// firstNameInputElement.value = '';
+		// lastNameInputElement.value = '';
+        // idInputElement.value = '';
+        // titleInputElement.value = '';
+        // annualSalaryInputElement.value = '';
 }
 
 module.exports = sayNames;
