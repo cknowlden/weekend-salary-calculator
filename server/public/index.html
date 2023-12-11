@@ -12,7 +12,7 @@
   </header>
   <main>
     <h2 class="employee">Add Employee</h2>
-    <form onsubmit="handleSubmit(eventObj)">
+    <form onsubmit="handleSubmit(event)">
       <input 
         name="firstNameInput" 
         data-testid="firstNameInput"
@@ -48,7 +48,6 @@
         placeholder="Annual Salary"
         type="number"
         />
-        <!-- <button data-testid="submitButton" onclick="handleSubmit(eventObj)">Submit</button> -->
         <button data-testid="submitButton">Submit</button>
       </form>
     <h2>Employees</h2>
@@ -66,16 +65,7 @@
           </tr>
         </thead>
         <tbody id="employeeTable tbody'">
-          <tr>
-            <!--the cells in the body tag are td-->
-            <td>Jane</td>
-            <td>Doe</td>
-          </tr>
-          <tr>
-            <!--the cells in the body tag are td-->
-            <td>John</td>
-            <td>Smith</td>
-          </tr>
+
         </tbody>
         <!-- tbody is the body of the table-->
       </table>  
