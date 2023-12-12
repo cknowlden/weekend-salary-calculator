@@ -1,5 +1,7 @@
 console.log('employee salary calc');
 let monthlyArray = [];
+let monthlyTotal;
+
 
 function handleSubmit(event){
 	//prevents default action, like a refresh on submit
@@ -37,18 +39,27 @@ function handleSubmit(event){
 		`
     //make array with salary and divide by 12 to get monthly
     monthlyArray.push(annualSalaryInputElement.value / 12);
-    console.log(monthlyArray);
-
+    console.log('monthly array is:', monthlyArray);
+    
+    //loop through to sum array
+    monthlyTotal = 0;
+    monthlyArray.forEach(element => {
+        monthlyTotal += element;
+    });
+    console.log('monthly sum', monthlyTotal);
     const salaryElement = document.querySelector('#total-monthly');
-        salaryElement.innerHTML += `${monthlyArray}`
+    salaryElement.innerHTML = `Total Monthly: $${monthlyTotal}`;
 
-		//clear form fields
-		firstNameInputElement.value = '';
-		lastNameInputElement.value = '';
-        idInputElement.value = '';
-        titleInputElement.value = '';
-        annualSalaryInputElement.value = '';
+    //clear form fields
+	firstNameInputElement.value = '';
+	lastNameInputElement.value = '';
+    idInputElement.value = '';
+    titleInputElement.value = '';
+    annualSalaryInputElement.value = '';
+    salaryElement.value = '';
 }
+
+
 
     //loop array to sum
     // monthlyTotal = 0
