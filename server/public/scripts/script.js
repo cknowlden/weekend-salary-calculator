@@ -1,4 +1,5 @@
 console.log('employee salary calc');
+let monthlyArray = [];
 
 function handleSubmit(event){
 	//prevents default action, like a refresh on submit
@@ -34,6 +35,13 @@ function handleSubmit(event){
             <td>${annualSalaryInputElement.value}</td>
 		</tr>
 		`
+    //make array with salary and divide by 12 to get monthly
+    monthlyArray.push(annualSalaryInputElement.value / 12);
+    console.log(monthlyArray);
+
+    const salaryElement = document.querySelector('#total-monthly');
+        salaryElement.innerHTML += `${monthlyArray}`
+
 		//clear form fields
 		firstNameInputElement.value = '';
 		lastNameInputElement.value = '';
@@ -42,15 +50,22 @@ function handleSubmit(event){
         annualSalaryInputElement.value = '';
 }
 
+    //loop array to sum
+    // monthlyTotal = 0
+    // for (let i=0; i<monthlyArray.length; i++){
+    //     monthlyArray += monthlyArray[i];
+    // };
+    // console.log(monthlyTotal);
+
     //total annual salaries
-function totalMonthly(){
-    var table = document.getElementById('employeeTable');
-    let total = 0;
-    for(let i=1; i<table.rows.length; i++){
-        total+=parseInt(table.rows[i].cells[2].innerHTML)
-    }
-    console.log(total);
-}
-totalMonthly();
+// function totalMonthly(){
+//     var table = document.getElementById('employeeTable');
+//     let total = 0;
+//     for(let i=1; i<table.rows.length; i++){
+//         total+=parseInt(table.rows[i].cells[2].innerHTML)
+//     }
+//     console.log(total);
+// }
+// totalMonthly();
 
 //module.exports = sayNames;
