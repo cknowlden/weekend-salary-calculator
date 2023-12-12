@@ -2,10 +2,18 @@
     background-color: aqua;
 }
 
-form {	
-    margin: 0 0 20px 0;
+.form-class {	
+    border: 15px solid #df8bd5
 }
 
-#employeeTable {
+.employeeTable {
 	border: 1px solid #000000;
+}
+
+tbody td{
+    border: 1px solid #000000;
+}
+
+tbody tr:nth-child(even){
+    background-color: aquamarine;
 }

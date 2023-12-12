@@ -13,7 +13,7 @@
   <main>
     <h2 class="employee">Add Employee</h2>
     <div id="error"></div>
-    <form onsubmit="handleSubmit(event)">
+    <form class="form-class" onsubmit="handleSubmit(event)">
       <input 
         name="firstNameInput" 
         data-testid="firstNameInput"
@@ -54,15 +54,15 @@
     <h2>Employees</h2>
     <section>
       <h4>Forms</h4>
-      <table id="employeeTable">
+      <table class="employeeTable">
         <thead>
           <tr>
             <th>First Name</th>
             <th>Last Name</th>
             <th>ID</th>
             <th>Title</th>
-            <th>Annual</th>
-            <th></th>
+            <th>Annual Salary</th>
+            <th id="delete-button">  </th>
           </tr>
         </thead>
         <tbody id="employeeTable tbody'">

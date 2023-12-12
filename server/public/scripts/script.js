@@ -11,6 +11,7 @@ function handleSubmit(event){
     const idInputElement = document.getElementById('idInput');
     const titleInputElement = document.getElementById('titleInput');
     const annualSalaryInputElement = document.getElementById('annualSalaryInput');
+    const deleteElement = document.getElementById('delete-button');
     const errorElement = document.getElementById('error');
 	console.log('Submit', event);
 	
@@ -26,16 +27,19 @@ function handleSubmit(event){
         return;
       }
 
-	const tableElement = document.querySelector('#employeeTable tbody');
+	const tableElement = document.querySelector('.employeeTable tbody');
 	console.log('TABLE:', tableElement)
 	tableElement.innerHTML += `
-		<tr>
+	<div>	
+        <tr>
 		    <td>${firstNameInputElement.value}</td>
 		    <td>${lastNameInputElement.value}</td>
             <td>${idInputElement.value}</td>
             <td>${titleInputElement.value}</td>
-            <td>${annualSalaryInputElement.value}</td>
+            <td>$${annualSalaryInputElement.value}</td>
+            <td><input type="button" value="Delete" onclick="removePerson(event)"></td>
 		</tr>
+    </div>
 		`
     //make array with salary and divide by 12 to get monthly
     monthlyArray.push(annualSalaryInputElement.value / 12);
@@ -56,27 +60,11 @@ function handleSubmit(event){
     idInputElement.value = '';
     titleInputElement.value = '';
     annualSalaryInputElement.value = '';
-    salaryElement.value = '';
 }
 
+function removePerson(event){
+    event.target.parentElement.remove();
+};
 
-
-    //loop array to sum
-    // monthlyTotal = 0
-    // for (let i=0; i<monthlyArray.length; i++){
-    //     monthlyArray += monthlyArray[i];
-    // };
-    // console.log(monthlyTotal);
-
-    //total annual salaries
-// function totalMonthly(){
-//     var table = document.getElementById('employeeTable');
-//     let total = 0;
-//     for(let i=1; i<table.rows.length; i++){
-//         total+=parseInt(table.rows[i].cells[2].innerHTML)
-//     }
-//     console.log(total);
-// }
-// totalMonthly();
 
 //module.exports = sayNames;
